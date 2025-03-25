@@ -1,0 +1,51 @@
+What is the primary reasons for any organizations to move to cloud ?
+for below reasons 
+1. managebility
+any startup company or organization has have their servers and it will have its own maintanance overhead.
+upgradations, server failures, patchig, need to have system mgmt team/admin team  etc 
+2. Cost 
+cloud provides pay as you use model 
+
+To be cost effective what an org hasto do ?
+>tracking resource usage 
+I am working for example.com it has 100 developers and I provided to all of these developres to AWS workspace.
+to be cost effective i have to monitor if every develper is making use of aws resources accuratly or not.
+suppose if a devoper X is created 100 ec2  and EBS volumes but no ec2 instances are using EBS volumes but AWS chanrges for EBS volumes as it is created.
+As a devops person its primary responsibility to monitor cost effectiveness bcz it is the primary reason that the org moved to cloud.
+
+ther are multiple ways to do resource tracking not only throughshell script like 
+>people use lambda functions 
+>python script 
+
+Ex: example.com this org is using 
+ec2 instance
+s3 
+lambda functions 
+IAM 
+task: everyday at certain time we have to pull the status of these resources and supply to a manager (ideally we send this information to repoting dashboard)
+create a file that lists no.of each resources available  
+
+>One can manually run this shell script every day but its not a ideal practice 
+>so usually any organization follows  like integrate shell script with crontab so one of the linux process executes the shel script at particular time 
+
+Project implementation
+>Create ec2 instance 
+>connect to ec2 instace through mobaxterm or putty or iterms 
+>change permissions to keypair file that downloaded during ec2 creation
+>connect toec2 server through private IP address ssh -i key.pem ubuntu@privateIP
+>create new dir and install AWS CLI on to it follow official AWS CLI installtion guide 
+>do AWS confugure to connect it with aws account by providing securitycredentials 
+>
+
+
+
+
+
+
+nMvSkumK2ULbp6X2AEzLcfZ7DRPUMnLnRlJ4sR1w
+
+
+
+
+
+
