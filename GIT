@@ -1,0 +1,48 @@
+ Q) How to initiate a git repo?
+  git init   >initializes local git repo and creates a .git folder
+  
+ Q) What is .git folder ?
+  It is the key component of .git. git will refer .git for tracking, for logging , to provide credentials to secret repo, to ensure that developers are not pushing any sensitive info to git .
+  ex: lets a file in git requires a password to be executed developers may unintentionally push passwords to git , to avoid such cases .git has a file called hooks/pre-commit  hook which will prevent it .
+  
+ Q) git workflow 
+  git add    >
+  git commit 
+  git push  push enire code to remote git (self hosted git, github, bitbucket)  git push will not work if you are not targeting to any remote repo (github, bitbucket) do git clone <remote repo url> to clone remote git to your local and then push
+  git clone
+  git remote -v to check the remote reference 
+  git remote add "reponame"   to create a repo on remote 
+  git status 
+  git diff
+  git log 
+  git add && git commit -m "" && git push  (commands that one use daily)
+  
+  Q) how to pull code from github? 
+  git clone 
+  clone mechanism
+  https >> copy url and do git clone and provide github password 
+  ssh >>   find out public on linux mechine using ssh-keygen -t rsa , copy public key and paste it in github settings , add new ssh key
+  githubcli >>  
+  
+  Q) git clone vs git fork?
+   git clone : download code to local and push code changes to remote 
+   git fork  : seperate copy of remote git and work seperately 
+   
+  Q) How to create a new branch ?
+   git branch >> cratea a new branch / empty branch 
+   git checkout -b   >> creates a branch from main branch 
+   git checkout  >> command to switch between branches 
+   
+  Q) add changes from one branch to another we can do 3 things 
+   git merge  >> merges changes but commits will be non-linear 
+   git rebase  >> merges changes in linear manner 
+   git cherry-pick commitid (particular commit id from sorce branch)   >> easy to do, applicable when there are limited commits like 1 or 2
+   
+  Q)  
+    
+  
+  
+ 
+  
+
+  
